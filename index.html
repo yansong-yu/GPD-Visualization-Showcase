@@ -9,12 +9,10 @@
 			html, body { margin: 0; height: 100%;}
             .container{
                 display: flex;
-                width: 100%;
                 flex-wrap: wrap;
                 justify-content: center; /* Horizontal centering */
                 align-items: center;     /* Vertical centering */
                 margin: 0.5%;
-                font-weight: bold;
             }
             .slider{
                 width: 30%;
@@ -58,14 +56,8 @@
                 width: 100%;
                 height: 100%;
             }
-
-            #reference{
-                display: flex;
-                justify-content: center;
-                font-size: x-large;
-            }
 		</style>
-		<script type="module" crossorigin src="./assets/index-BJhsoSwl.js"></script>
+		<script type="module" crossorigin src="/assets/index-C4OQ8785.js"></script>
 	</head>
 	<body>
         <div id="loading-overlay">
@@ -75,21 +67,37 @@
         <div id="main-content">
             <div id="three-container"></div>
             <div class="container">
-                x <div class="slider" id="slider_x"></div>
-                t <div class="slider" id="slider_t"></div>
-            </div>
-            <div id="reference">
-                <div>
-                    <div style="font-weight: bold;">
-                        Reference
-                    </div>
+                <label for="dropdown1">Axis 1</label>
+                <select id="dropdown1" name="dropdown">
+                    <option value="" selected disabled hidden>Select an option</option>
+                    <option value="0">x</option>
+                    <option value="1">xi</option>
+                    <option value="2">t</option>
+                    <option value="3">Q2</option>
+                </select> 
+                <div class="slider" id="slider_1"></div>
+                <label for="dropdown2">Axis 2</label>
+                <select id="dropdown2" name="dropdown">
+                    <option value="" selected disabled hidden>Select an option</option>
+                    <option value="0">x</option>
+                    <option value="1">xi</option>
+                    <option value="2">t</option>
+                    <option value="3">Q2</option>
+                </select> 
+                <div class="slider" id="slider_2"></div>
+                <div id="reference">
                     <div>
-                        <ol>
-                            <li>S. V. Goloskokov and P. Kroll, ‘The Role of the quark and gluon GPDs in hard vector-meson electroproduction’, Eur. Phys. J. C, vol. 53, pp. 367–384, 2008.</li>
-                        </ol>
+                        <div style="font-weight: bold;">
+                            Reference
+                        </div>
+                        <div>
+                            <ol>
+                                <li>S. V. Goloskokov and P. Kroll, ‘The Role of the quark and gluon GPDs in hard vector-meson electroproduction’, Eur. Phys. J. C, vol. 53, pp. 367–384, 2008.</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
 	</body>
 </html>
