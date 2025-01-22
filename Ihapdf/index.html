@@ -228,27 +228,7 @@
             
             const dataset = document.getElementById("dataset").value
             console.log(document.getElementById("dataset").value)
-            // Remove 'du' if dataset is CJ15nlo
-            if (dataset === "CJ15nlo") {
-                console.log("here")
-                const duOption = Array.from(document.getElementById("variable").options).find(
-                    (option) => option.value === "du"
-                );
-                if (duOption) duOption.remove(); // Remove 'du' if it exists
-            }
-
-            // Add 'du' back if dataset is JAM20
-            if (dataset === "JAM20") {
-                const duExists = Array.from(document.getElementById("variable").options).some(
-                    (option) => option.value === "du"
-                );
-                if (!duExists) {
-                    const duOption = document.createElement("option");
-                    duOption.value = "du";
-                    duOption.textContent = "du";
-                    variableSelector.insertBefore(duOption, variableSelector.firstChild); // Add 'du' to the top
-                }
-            }
+            
 
             // Ensure selected variable is valid
             const selectedVariable = variableSelector.value;
